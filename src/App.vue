@@ -30,20 +30,6 @@ import NavBar from './components/NavBar.vue';
         </NavLink>
       </div> -->
     </header>
-  <!-- <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-    <LogoIcon />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/products-details">Explore</RouterLink>
-        <RouterLink to="/new-product">Create</RouterLink>
-      </nav>
-    </div>
-  </header> -->
 
   <RouterView />
 </template>
