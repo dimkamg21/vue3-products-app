@@ -1,29 +1,43 @@
-# vue-test-task
+# Vue test task
 
-This template should help get you started developing with Vue 3 in Vite.
+It is a simple, user-friendly app where you can interact with products from an
+open API.
 
-## Recommended IDE Setup
+## Links:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- [DEMO](https://dimkamg21.github.io/vue3-products-app/)
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Build With
 
-## Project Setup
+- Vue3 (Composition API)
+- Vuex
+
+
+## Setup
+
+1. Use 20 version of node.js: <br>
+
+2. Clone the repository to your local machine, open terminal (GitBash for Windows users) and clone repo with command bellow:
 
 ```sh
-npm install
+git clone https://github.com/dimkamg21/vue3-products-app.git
 ```
 
-### Compile and Hot-Reload for Development
+3. Open editor, set up project and install necessary packages in the code-editor you use:
 
 ```sh
-npm run dev
+$ npm install
 ```
 
-### Compile and Minify for Production
+4. Open the project in browser:
 
 ```sh
-npm run build
+$ npm run dev
+```
+
+4. Bulid project:
+
+```sh
+$ npm run build
 ```

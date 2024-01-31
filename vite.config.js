@@ -11,7 +11,7 @@ export default defineConfig({
   ],
   build: {
     rollupOptions: {
-      external: ['vuex'], // Add 'vuex' to the external array
+      external: ['vuex', 'axios'],
     },
   },
   resolve: {
