@@ -10,6 +10,28 @@ export const store = createStore({
     setProducts(state, products) {
       state.products = products;
     },
+
+    get(state) {
+      return state.products;
+    },
+    delete(state, payload) {
+      state.products = state.products.filter((item) => item.id !== payload);
+    },
+    create(state, payload) {
+      state.products.unshift(payload);
+    },
+    update(state, payload) {
+      state.products = state.products.map((item) => {
+        if (item.id === payload.id) {
+          return {
+            ...item,
+            ...payload,
+          };
+        } else {
+          return item;
+        }
+      });
+    },
   },
   actions: {
     async fetchProducts({ commit }) {

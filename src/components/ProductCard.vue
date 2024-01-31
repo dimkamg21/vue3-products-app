@@ -5,7 +5,7 @@
       <h3 class="productCard__title">{{ product.title }}</h3>
     </router-link>
     <div class="productCard__price">
-      <span class="productCard__price-main">{{ `$${product.price - 9}` }}</span>
+      <span class="productCard__price-main">{{ `${actualPrice}$ ` }}</span>
       <s class="productCard__price-discount">
         {{ `$${product.price}` }}
       </s>
@@ -37,11 +37,18 @@
 </template>
 
 <script>
+import { getPriceWithDiscount } from '@/helpers/getPriceWithDiscount';
+
 export default {
   props: {
     product: {
       type: Object,
       required: true,
+    },
+  },
+  computed: {
+    actualPrice() {
+      return getPriceWithDiscount(this.product.price, this.product.discountPercentage);
     },
   },
 };
@@ -65,6 +72,7 @@ export default {
     text-align: center;
     height: 208px;
     width: 208px;
+    min-height: 186px;
     margin-block: 8px 24px;
     object-fit: contain;
   }

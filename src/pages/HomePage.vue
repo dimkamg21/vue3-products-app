@@ -88,7 +88,7 @@ watch(sortBy, () => {
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr));
   gap: 1rem;
 
-  align-items: center; /* Center items vertically */
+  align-items: center;
   justify-items: center;
 
   @media (max-width: 571px) {
