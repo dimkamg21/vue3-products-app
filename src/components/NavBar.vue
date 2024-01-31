@@ -1,23 +1,6 @@
-<script>
-
-export default {
-  name: 'NavBar',
-  data() {
-    return {
-      routes: [
-        { path: '/', label: 'Home' },
-        { path: '/products-details', label: 'Explore' },
-        { path: '/new-product', label: 'Create' },
-      ]
-    };
-  }
-};
-
-</script>
-
 <template>
-  <nav className="nav">
-    <ul className="nav__list">
+  <nav class="nav">
+    <ul class="nav__list">
       <li v-for="route in routes" :key="route.path" class="nav__link">
         <RouterLink :to="route.path">
           {{ route.label }}
@@ -26,6 +9,25 @@ export default {
     </ul>
   </nav>
 </template>
+
+<script>
+import { ref } from 'vue';
+
+export default {
+  name: 'NavBar',
+  setup() {
+    const routes = ref([
+      { path: '/', label: 'Home' },
+      { path: '/new-product', label: 'Create' },
+    ]);
+
+    return {
+      routes,
+    };
+  },
+};
+</script>
+
 
 <style lang="scss" scoped>
 @import "../assets/utils";
